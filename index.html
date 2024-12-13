@@ -74,7 +74,7 @@
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             
             // حساب عدد المنتجات في السلة
-            const cartCount = cart.reduce((total, product) => total + product.quantity, -1);
+            const cartCount = cart.reduce((total, product) => total + product.quantity, 0);
           
             // تحديث العداد في العنصر
             const cartCountElement = document.getElementById('cart-count');
