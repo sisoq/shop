@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" sizes="192x192" href="assets/playstore.png">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+    
+    </style>
+    <!-- القائمة الرئيسية -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="admin.html">Admin</a>
+      <a href="about_page.html">About Us</a>
+    </nav>
+
+    <!-- تفاصيل المنتج -->
+    <div id="product-details">
+      <h1>Product Details</h1>
+      <div class="product-info">
+        <img
+          id="product-image"
+          src=""
+          alt="Product Image"
+          class="product-image"
+        />
+        <div class="product-details-text">
+          <h2 id="product-name">Product Name</h2>
+          <p id="product-price">$0.00</p>
+          <p id="product-description">Product description goes here...</p>
+          <button id="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- المنتجات المشابهة -->
+    <div id="related-products">
+      <h2>Related Products</h2>
+      <div id="related-products-container" class="related-products-section">
+        <!-- سيتم عرض المنتجات المشابهة هنا -->
+      </div>
+    </div>
+
+    <!-- المنتجات العشوائية في أسفل الصفحة -->
+    <div id="random-products-container" class="random-products-section">
+      <h2>More Random Products</h2>
+      <!-- سيتم عرض المنتجات العشوائية هنا -->
+    </div>
+
+    <!-- JavaScript لإدارة سلة التسوق وعرض المنتجات -->
+    <script src="js/cart.js"></script>
+    <!-- ملف إدارة سلة التسوق -->
+    <script type="module" src="js/randomproducts.js"></script>
+    <!-- ملف عرض المنتجات العشوائية -->
+    <script type="module" src="js/product.js"></script>
+    <!-- ملف عرض تفاصيل المنتج -->
+
+    <script>
+      // عرض تفاصيل المنتج
+      displayProductDetails();
+
+      // عرض 5 منتجات مشابهة في أسفل الصفحة
+      displayRelatedProducts("related-products-container");
+
+
+    </script>
+    <script type="module">
+      import { displayRandomProducts } from "./js/randomproducts.js";
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        // Display random products once the DOM is fully loaded
+        displayRandomProducts("random-products-container");
+    
+        // Handle sort filter changes (if sorting functionality is implemented later)
+        const sortFilter = document.getElementById('sortFilter');
+        if (sortFilter) {
+          sortFilter.addEventListener('change', () => {
+            const sortOption = sortFilter.value;
+            console.log('Selected sort option:', sortOption);
+            // Add sorting logic here if needed
+          });
+        }
+      });
+    </script>
+    
+  </body>
+</html>

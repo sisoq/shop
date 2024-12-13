@@ -1,0 +1,21 @@
+[debug] [2024-12-12T20:31:44.826Z] ----------------------------------------------------------------------
+[debug] [2024-12-12T20:31:44.833Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ThinkUp\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-12-12T20:31:44.834Z] CLI Version:   13.28.0
+[debug] [2024-12-12T20:31:44.834Z] Platform:      win32
+[debug] [2024-12-12T20:31:44.834Z] Node Version:  v22.12.0
+[debug] [2024-12-12T20:31:44.835Z] Time:          Thu Dec 12 2024 21:31:44 GMT+0100 (GMT+01:00)
+[debug] [2024-12-12T20:31:44.835Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-12T20:31:44.850Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-12T20:31:44.850Z] > authorizing via signed-in user (aa54474579@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ThinkUp\Desktop\ecommerce-website
+

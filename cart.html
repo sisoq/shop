@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="192x192" href="assets/playstore.png">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+nav a:hover {
+  color: #ddd;
+}
+</style>
+<body>
+  <nav>
+    <a href="product.html">Product</a>
+    <a href="index.html">HOME</a>
+    <a href="cart.html">Support</a>
+    <a href="admin.html">admin</a>
+    <a href="html/about_page.html">about page</a>
+  </nav>
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items">
+        <!-- سيتم عرض المنتجات هنا -->
+    </div>
+    <div id="cart-items" class="cart-container">
+      <!-- Cart items will be dynamically injected here -->
+    </div>
+    <p id="cart-total" class="cart-total"></p>
+    
+    <div id="random-products-container" class="random-products-section">
+      <!-- سيتم عرض المنتجات العشوائية هنا -->
+    </div>
+    <script src="js/cart.js"></script>
+    <script type="module" src="js/randomProducts.js"></script>
+    <script>
+        // عرض محتويات السلة
+        displayCart();
+    </script>
+<script type="module">
+  import { displayRandomProducts } from "./js/randomproducts.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Display random products once the DOM is fully loaded
+    displayRandomProducts("random-products-container");
+
+    // Handle sort filter changes (if sorting functionality is implemented later)
+    const sortFilter = document.getElementById('sortFilter');
+    if (sortFilter) {
+      sortFilter.addEventListener('change', () => {
+        const sortOption = sortFilter.value;
+        console.log('Selected sort option:', sortOption);
+        // Add sorting logic here if needed
+      });
+    }
+  });
+</script>
+</body>
+</html>
